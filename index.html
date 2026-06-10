@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAS Kelompok 2 — Telkomsel Service Desk osTicket</title>
+<style>
+:root{--red:#e11d48;--navy:#0f172a;--teal:#0891b2;--bg:#f8fafc;--card:#fff;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--navy);line-height:1.55}
+.hero{background:linear-gradient(135deg,var(--navy),#1e3a5f);color:#fff;padding:2.5rem 1.5rem}
+.hero h1{font-size:1.75rem;margin-bottom:.5rem}
+.hero p{opacity:.9;max-width:720px}
+.badge{display:inline-block;background:var(--red);padding:.25rem .75rem;border-radius:999px;font-size:.8rem;font-weight:600;margin-bottom:1rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.cta a{background:#fff;color:var(--navy);padding:.65rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem}
+.cta a.primary{background:var(--teal);color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:1.5rem}
+section{margin:2rem 0}
+h2{font-size:1.25rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:3px solid var(--red)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin:1rem 0}
+.kpi{background:var(--card);border-radius:10px;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.kpi-val{font-size:1.5rem;font-weight:700;color:var(--red)}
+.kpi-lbl{font-size:.75rem;color:var(--muted);margin-top:.25rem}
+.slide{background:var(--card);border-left:4px solid var(--teal);padding:1rem 1.25rem;margin-bottom:.75rem;border-radius:0 8px 8px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.slide .num{display:inline-block;background:var(--navy);color:#fff;width:1.5rem;height:1.5rem;border-radius:50%;text-align:center;line-height:1.5rem;font-size:.75rem;margin-right:.5rem}
+.slide h3{display:inline;font-size:1rem}
+.slide p{margin-top:.5rem;font-size:.9rem;color:#334155}
+.script-box{background:#1e293b;color:#e2e8f0;padding:1.25rem;border-radius:10px;font-size:.88rem;white-space:pre-wrap;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-size:.85rem;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+th,td{padding:.65rem .75rem;text-align:left;border-bottom:1px solid #e2e8f0;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:600}
+tr:hover td{background:#f1f5f9}
+code{background:#f1f5f9;padding:.1rem .35rem;border-radius:4px;font-size:.8rem}
+.muted{color:var(--muted);font-size:.8rem}
+.qa{font-size:.8rem;color:#475569}
+.warn{background:#fff7ed;border:1px solid #fdba74;padding:1rem;border-radius:8px;font-size:.85rem;margin:1rem 0}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:.8rem}
+@media print{.hero{background:#0f172a;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="badge">UAS MLTI · ITIL 4 · Kelompok 2 Telkomsel</div>
+    <h1>Paket Presentasi & Demo osTicket</h1>
+    <p>Script presentasi 7 menit, demo 5 menit, log kontribusi individu, dan link demo live — satu halaman untuk seluruh tim.</p>
+    <div class="cta">
+      <a class="primary" href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/login.php" target="_blank">Buka Demo osTicket (Staff Login)</a>
+      <a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/dashboard.php" target="_blank">Dashboard</a>
+      <a href="https://osticketmlti.infinity.io/scp/login.php" target="_blank">Mirror InfinityFree</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Login Demo</h2>
+    <table>
+      <tr><th>Role</th><th>Username</th><th>Password</th></tr>
+      <tr><td>Manager</td><td><code>Delta_Oga</code></td><td><code>Telkomsel2026!</code></td></tr>
+      <tr><td>Agent L1</td><td><code>agent_arya</code> / <code>agent_hendra</code></td><td><em>(password lokal tim)</em></td></tr>
+      <tr><td>L2 Tech</td><td><code>tech_raka</code></td><td><em>(password lokal tim)</em></td></tr>
+      <tr><td>Teman kolaborasi</td><td><code>teman_kolaborasi</code></td><td><code>TemanOs2026!</code></td></tr>
+    </table>
+    <div class="warn">Demo live via Cloudflare Tunnel — Mac harus nyala selama UAS. Backup: screenshot di folder laporan. Mirror InfinityFree aktif setelah MySQL di-import.</div>
+  </section>
+
+  <section>
+    <h2>KPI Singkat</h2>
+    <div class="kpis"><div class="kpi"><div class="kpi-val">10</div><div class="kpi-lbl">Tiket Diterima</div></div><div class="kpi"><div class="kpi-val">100%</div><div class="kpi-lbl">Tingkat Resolusi</div></div><div class="kpi"><div class="kpi-val">80%</div><div class="kpi-lbl">Pencapaian SLA</div></div><div class="kpi"><div class="kpi-val">20%</div><div class="kpi-lbl">Tingkat Eskalasi</div></div><div class="kpi"><div class="kpi-val">187 mnt</div><div class="kpi-lbl">Rata Resolusi</div></div></div>
+  </section>
+
+  <section>
+    <h2>Script Presentasi (7 menit)</h2>
+    <div class="script-box">[0:00-0:45] Delta — Pembukaan: "Kami Kelompok 2 Telkomsel. Service Desk dimodelkan di osTicket dengan 5 departemen ITIL 4."
+[0:45-1:30] Delta — Struktur tim: SDM, 2 agent L1, 1 L2. Tunjuk slide struktur.
+[1:30-2:30] Delta — Service Catalog 13 layanan + klasifikasi Incident/Request/Complaint/Inquiry.
+[2:30-3:15] Delta — Priority Matrix & SLA P1-P4 (response/resolution time).
+[3:15-4:15] Kadek — Simulasi: 10 tiket masuk Shopee, semua Closed. Sebut #506095 sinyal, #187211 top-up.
+[4:15-5:15] Hendra — KPI: resolusi 100%, SLA 80%, eskalasi 20%, rata 187 menit. Dua tiket overdue: #235192 & #993017.
+[5:15-6:15] Raka — Eskalasi L2: #574396 profil data, #187211 payment gateway TRX882910.
+[6:15-7:00] Delta — 3 rekomendasi continual improvement + kesimpulan.</div>
+    <div class="slide"><span class="num">1</span><h3>Profil Telkomsel</h3><p>Telkomsel menangani layanan seluler melalui GraPARI, aplikasi MyTelkomsel, call center, dan kanal digital. Pada praktikum ini, operasi Service Desk dimodelkan di osTicket dengan lima departemen: Service Desk, Technical Support, Billing & Payment, Network Operations, dan Customer …</p></div><div class="slide"><span class="num">2</span><h3>Struktur Service Desk</h3><p>Struktur tim di Staff Panel: Delta Oga sebagai Service Desk Manager, Kadek Arya dan I Gede Hendra sebagai agent L1, serta Raka Pratama di L2 Technical Support. Help topic, SLA plan P1-P4, team L1/L2, dan enam artikel Knowledge Base sudah dikonfigurasi sebelum simulasi lintas kelompok dijalankan.</p></div><div class="slide"><span class="num">3</span><h3>Service Catalog</h3><p>13 layanan: Incident, Service Request, Complaint, Inquiry across 5 departemen.</p></div><div class="slide"><span class="num">4</span><h3>Priority & SLA Matrix</h3><p>P1 15m/1h · P2 30m/4h · P3 2h/8h · P4 8h/24h</p></div><div class="slide"><span class="num">5</span><h3>Simulasi Operasional</h3><p>Data diambil dari Ticket List dan export tabel tiket osTicket setelah seluruh thread ditutup. Volume masuk: 10 tiket, status akhir semua Closed, Open=0. Komposisi jenis: Incident 4, Service Request 3, Complaint 2, Inquiry 1. Prioritas: P2 (3), P3 (5), P4 (2). Eskalasi L2 tercatat pada #574396 (profi…</p></div><div class="slide"><span class="num">6</span><h3>KPI Service Desk</h3><p>Tiket Diterima: 10 | Tingkat Resolusi: 100% | Pencapaian SLA: 80% | Tingkat Eskalasi: 20% | Rata Resolusi: 187 mnt</p></div><div class="slide"><span class="num">7</span><h3>Analisis Masalah</h3><p>Incident paling banyak: 4 dari 10 tiket. Rinciannya #506095 sinyal hilang Kemang, #574396 internet lambat Bandung, #187211 top-up TRX882910 saldo terpotong, dan #235192 login MyTelkomsel error 503. Ke…</p></div><div class="slide"><span class="num">8</span><h3>Continual Improvement</h3><p>Buat alert otomatis di osTicket bila tiket internet P3 tidak | Tambahkan pengecekan status transaksi MyTelkomsel di runbook | Siapkan jalur komunikasi cepat ke tim aplikasi MyTelkomsel d</p></div><div class="slide"><span class="num">9</span><h3>Kesimpulan</h3><p>Simulasi lintas kelompok di portal osTicket Telkomsel pada 8 Juni 2026 menghasilkan sepuluh tiket masuk dari Shopee (Kelompok 3). Semua tiket berstatus Closed di Ticket List; tidak ada tiket yang tertinggal Open. Komposisi jenis tiket: Incident 4, Se…</p></div>
+  </section>
+
+  <section>
+    <h2>Script Demo osTicket (5 menit)</h2>
+    <div class="script-box">Pembawa demo: bergantian sesuai tiket.
+1. Dashboard — "10 tiket, semua Closed."
+2. Ticket List — scroll, filter Closed.
+3. Buka #506095 — Kadek jelaskan assignment & KB-01.
+4. Buka #574396 — Hendra tunjuk internal note, Raka jelaskan eskalasi L2.
+5. Buka #235192 — tunjuk SLA overdue (isoverdue).
+6. Knowledge Base — Hendra buka KB-05.
+7. Buka #993017 — Kadek jelaskan dispute NSP & SLA breach.
+8. Tutup: "Semua tiket Closed, resolusi 100%."</div>
+    <table>
+      <tr><th>#</th><th>Komponen</th><th>Link Demo</th><th>Catatan</th><th>Backup SS</th></tr>
+      <tr>
+      <td>1</td>
+      <td>Dashboard</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/dashboard.php" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/dashboard.php</a></td>
+      <td>Ringkasan 10 tiket Closed</td>
+      <td><code>01-dashboard</code></td>
+    </tr><tr>
+      <td>2</td>
+      <td>Ticket List</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php</a></td>
+      <td>Semua tiket simulasi masuk</td>
+      <td><code>07-ticket-list</code></td>
+    </tr><tr>
+      <td>3</td>
+      <td>Ticket Detail #506095</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=37" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=37</a></td>
+      <td>Insiden sinyal Kemang, Kadek Arya</td>
+      <td><code>09-ticket-detail-sinyal</code></td>
+    </tr><tr>
+      <td>4</td>
+      <td>Assignment #750333</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=39" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=39</a></td>
+      <td>Aktivasi SIM → agent_arya</td>
+      <td><code>07-ticket-list</code></td>
+    </tr><tr>
+      <td>5</td>
+      <td>Eskalasi L2 #574396</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=38" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=38</a></td>
+      <td>Internal note → Raka Pratama</td>
+      <td><code>10-ticket-escalation-internet</code></td>
+    </tr><tr>
+      <td>6</td>
+      <td>SLA Breach #235192</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=40" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=40</a></td>
+      <td>MyTelkomsel error 503 overdue</td>
+      <td><code>11-ticket-sla-breach-app</code></td>
+    </tr><tr>
+      <td>7</td>
+      <td>Knowledge Base</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/kb.php" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/kb.php</a></td>
+      <td>6 artikel KB</td>
+      <td><code>08-knowledge-base</code></td>
+    </tr><tr>
+      <td>8</td>
+      <td>SLA Breach #993017</td>
+      <td><a href="https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=45" target="_blank">https://whilst-kurt-enjoying-choose.trycloudflare.com/scp/tickets.php?id=45</a></td>
+      <td>Dispute NSP overdue</td>
+      <td><code>12-ticket-sla-breach-nsp</code></td>
+    </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Log Kontribusi Individu</h2>
+    <table>
+      <tr><th>Anggota</th><th>Kontribusi</th><th>Bukti</th><th>Persiapan Tanya Jawab</th></tr>
+      <tr>
+      <td><strong>Delta Oga Putra</strong><br><span class="muted">Service Desk Manager</span></td>
+      <td><ul><li>Merancang struktur 5 departemen dan 3 tim (L1, L2, Knowledge Management)</li><li>Mengonfigurasi SLA Plan P1–P4 dan help topic dari Service Catalog</li><li>Mengelola simulasi lintas kelompok dan export KPI</li><li>Menyusun laporan akhir dan koordinasi tiket keluar OUT-01–OUT-10</li></ul></td>
+      <td><code>— (manajerial)</code><br>Screenshot 02–06, login Delta_Oga, dashboard & SLA plans</td>
+      <td class="qa">Jelaskan Priority Matrix, SLA Matrix, dan alasan klasifikasi P2 pada tiket sinyal #506095.</td>
+    </tr><tr>
+      <td><strong>Kadek Arya</strong><br><span class="muted">Service Desk Agent L1</span></td>
+      <td><ul><li>Menangani tiket #506095 (sinyal Kemang, KB-01)</li><li>Menangani tiket #750333 (aktivasi SIM, KB-03)</li><li>Menangani tiket #724693 (refund kartuHALO)</li><li>Menangani tiket #993017 (dispute NSP, SLA melanggar)</li></ul></td>
+      <td><code>#506095, #750333, #724693, #993017</code><br>Ticket #506095, #750333, #724693, #993017 — assignee agent_arya</td>
+      <td class="qa">Bagaimana Anda menangani tiket #993017 yang melewati SLA? Apa langkah verifikasi NSP?</td>
+    </tr><tr>
+      <td><strong>I Gede Hendra</strong><br><span class="muted">Agent L1 / Knowledge Base</span></td>
+      <td><ul><li>Menulis & memelihara 6 artikel KB (KB-01 sampai KB-06)</li><li>Menangani tiket #235192 (MyTelkomsel error 503, SLA melanggar)</li><li>Menangani tiket #313293, #987341, #230991</li><li>Mencatat internal note eskalasi pada #574396 sebelum naik L2</li></ul></td>
+      <td><code>#235192, #313293, #987341, #230991</code><br>Screenshot 08-knowledge-base, Ticket #235192, #230991, KB-05</td>
+      <td class="qa">Artikel KB mana yang paling sering dipakai? Beri contoh pada tiket #230991.</td>
+    </tr><tr>
+      <td><strong>Raka Pratama</strong><br><span class="muted">Technical Support L2</span></td>
+      <td><ul><li>Eskalasi #574396: reset profil data pelanggan Bandung</li><li>Eskalasi #187211: kredit manual Rp100.000 transaksi TRX882910</li><li>Menutup tiket L2 setelah root cause backend/gateway</li></ul></td>
+      <td><code>#574396, #187211 (eskalasi L2)</code><br>Screenshot 10-ticket-escalation-internet, Ticket #574396 & #187211</td>
+      <td class="qa">Kapan tiket wajib dieskalasi ke L2? Jelaskan kasus TRX882910.</td>
+    </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Continual Improvement (min. 3)</h2>
+    <table>
+      <tr><th>Temuan Data</th><th>Rekomendasi</th></tr>
+      <tr><td>#574396: profil data pelanggan Bandung belum sinkron setelah update paket</td><td>Buat alert otomatis di osTicket bila tiket internet P3 tidak selesai dalam 2 jam tanpa perubahan status, agar eskalasi L2 lebih cepat</td></tr><tr><td>#187211: transaksi TRX882910 pending karena timeout callback payment gateway</td><td>Tambahkan pengecekan status transaksi MyTelkomsel di runbook Billing & Payment sebelum tiket ditutup</td></tr><tr><td>#235192 dan #993017 melewati SLA (isoverdue=1) meski akhirnya Closed</td><td>Siapkan jalur komunikasi cepat ke tim aplikasi MyTelkomsel dan tim VAS billing saat muncul error 503 atau dispute NSP</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Timing UAS (±20 menit)</h2>
+    <table>
+      <tr><th>Blok</th><th>Durasi</th><th>Pembawa</th></tr>
+      <tr><td>Presentasi</td><td>7 menit</td><td>Delta (lead), Kadek/Hendra/Raka insert KPI & eskalasi</td></tr>
+      <tr><td>Demo osTicket</td><td>5 menit</td><td>Semua — Kadek list, Hendra KB, Raka eskalasi</td></tr>
+      <tr><td>Tanya jawab dosen</td><td>5 menit</td><td>Semua</td></tr>
+      <tr><td>Tanya jawab individu</td><td>3-5 menit/orang</td><td>Per anggota sesuai role</td></tr>
+    </table>
+  </section>
+</main>
+<footer>Kelompok 2 Telkomsel · MLTI ITIL 4 · 8 Juni 2026 · Demo: https://whilst-kurt-enjoying-choose.trycloudflare.com</footer>
+</body>
+</html>
