@@ -55,13 +55,59 @@ footer{text-align:center;padding:2rem;color:var(--muted);font-size:.8rem}
 
 <main class="wrap">
   <section>
-    <h2>Login Demo</h2>
+    <h2>Akun Staff osTicket (Login Demo)</h2>
+    <p class="muted">Semua akun aktif di <a href="https://osticketmlti.infinityfreeapp.com/scp/login.php" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/login.php</a>. Gunakan <code>teman_kolaborasi</code> untuk review cepat; gunakan akun per anggota saat demo peran.</p>
     <table>
-      <tr><th>Role</th><th>Username</th><th>Password</th></tr>
-      <tr><td>Manager</td><td><code>Delta_Oga</code></td><td><code>Telkomsel2026!</code></td></tr>
-      <tr><td>Agent L1</td><td><code>agent_arya</code> / <code>agent_hendra</code></td><td><em>(password lokal tim)</em></td></tr>
-      <tr><td>L2 Tech</td><td><code>tech_raka</code></td><td><em>(password lokal tim)</em></td></tr>
-      <tr><td>Teman kolaborasi</td><td><code>teman_kolaborasi</code></td><td><code>TemanOs2026!</code></td></tr>
+      <tr><th>Nama</th><th>Role UAS</th><th>Username</th><th>Password</th><th>Email</th><th>Akses osTicket</th><th>Catatan</th></tr>
+      <tr>
+      <td><strong>Delta Oga Putra</strong></td>
+      <td>Service Desk Manager</td>
+      <td><code>Delta_Oga</code></td>
+      <td><code>Telkomsel2026!</code></td>
+      <td><a href="mailto:delta.oga@telkomsel.co.id">delta.oga@telkomsel.co.id</a></td>
+      <td>All Access (Admin)</td>
+      <td class="muted">Akun utama tim; konfigurasi SLA, departemen, KPI</td>
+    </tr><tr>
+      <td><strong>Kadek Arya</strong></td>
+      <td>Service Desk Agent L1</td>
+      <td><code>agent_arya</code></td>
+      <td><code>AgentUAS2026!</code></td>
+      <td><a href="mailto:kadek.arya@telkomsel.co.id">kadek.arya@telkomsel.co.id</a></td>
+      <td>Limited Access</td>
+      <td class="muted">Tiket #506095, #750333, #724693, #993017</td>
+    </tr><tr>
+      <td><strong>I Gede Hendra</strong></td>
+      <td>Agent L1 / Knowledge Base</td>
+      <td><code>agent_hendra</code></td>
+      <td><code>AgentUAS2026!</code></td>
+      <td><a href="mailto:igede.hendra@telkomsel.co.id">igede.hendra@telkomsel.co.id</a></td>
+      <td>Limited Access</td>
+      <td class="muted">KB editor; tiket #235192, #313293, #987341, #230991</td>
+    </tr><tr>
+      <td><strong>Raka Pratama</strong></td>
+      <td>Technical Support L2</td>
+      <td><code>tech_raka</code></td>
+      <td><code>RakaUAS2026!</code></td>
+      <td><a href="mailto:raka.pratama@telkomsel.co.id">raka.pratama@telkomsel.co.id</a></td>
+      <td>Expanded Access</td>
+      <td class="muted">Eskalasi L2: #574396, #187211</td>
+    </tr><tr>
+      <td><strong>Teman Kolaborasi</strong></td>
+      <td>Akun demo hosting (kolaborasi virtual)</td>
+      <td><code>teman_kolaborasi</code></td>
+      <td><code>TemanOs2026!</code></td>
+      <td><a href="mailto:teman.kolaborasi@example.com">teman.kolaborasi@example.com</a></td>
+      <td>Expanded Access</td>
+      <td class="muted">Login default untuk dosen / reviewer eksternal</td>
+    </tr><tr>
+      <td><strong>Dosen Penguji</strong></td>
+      <td>Akun demo penguji UAS</td>
+      <td><code>dosen_demo</code></td>
+      <td><code>DosenUAS2026!</code></td>
+      <td><a href="mailto:dosen@uajy.ac.id">dosen@uajy.ac.id</a></td>
+      <td>Expanded Access</td>
+      <td class="muted">Opsional; hanya baca & navigasi demo</td>
+    </tr>
     </table>
     <div class="warn" id="status-box">Memeriksa status demo...</div>
     <script>
@@ -133,25 +179,25 @@ footer{text-align:center;padding:2rem;color:var(--muted);font-size:.8rem}
     </tr><tr>
       <td>3</td>
       <td>Ticket Detail #506095</td>
-      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=37" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=37</a></td>
+      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=506095" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=506095</a></td>
       <td>Insiden sinyal Kemang, Kadek Arya</td>
       <td><code>09-ticket-detail-sinyal</code></td>
     </tr><tr>
       <td>4</td>
       <td>Assignment #750333</td>
-      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=39" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=39</a></td>
+      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=750333" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=750333</a></td>
       <td>Aktivasi SIM → agent_arya</td>
       <td><code>07-ticket-list</code></td>
     </tr><tr>
       <td>5</td>
       <td>Eskalasi L2 #574396</td>
-      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=38" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=38</a></td>
+      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=574396" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=574396</a></td>
       <td>Internal note → Raka Pratama</td>
       <td><code>10-ticket-escalation-internet</code></td>
     </tr><tr>
       <td>6</td>
       <td>SLA Breach #235192</td>
-      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=40" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=40</a></td>
+      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=235192" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=235192</a></td>
       <td>MyTelkomsel error 503 overdue</td>
       <td><code>11-ticket-sla-breach-app</code></td>
     </tr><tr>
@@ -163,7 +209,7 @@ footer{text-align:center;padding:2rem;color:var(--muted);font-size:.8rem}
     </tr><tr>
       <td>8</td>
       <td>SLA Breach #993017</td>
-      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=45" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=45</a></td>
+      <td><a href="https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=993017" target="_blank">https://osticketmlti.infinityfreeapp.com/scp/tickets.php?id=993017</a></td>
       <td>Dispute NSP overdue</td>
       <td><code>12-ticket-sla-breach-nsp</code></td>
     </tr>
